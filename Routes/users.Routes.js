@@ -22,10 +22,7 @@ userRouter.post('/register',async(req,res)=>{
                 city,
                 age,
                 gender,
-                cart:[],
-                wishlist:[],
-                active_orders:[],
-                past_orders:[]
+                
             })
             await user.save()
             res.status(200).send({"msg":"The new use is registered scuccessfully","new_user":req.body})
